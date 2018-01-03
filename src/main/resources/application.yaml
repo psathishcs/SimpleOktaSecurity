@@ -1,0 +1,38 @@
+
+spring:
+  application:
+    name: SimpleOktaSecurity
+    instance_id: i001
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/world
+    username: root
+    password: Nov#2017
+    initialize: true
+    testWhileIdle: 1
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy    
+
+logging:
+  level:
+    org.hello.boot.rs.controllers: INFO
+    
+server:
+  port: 8089
+  contextPath: /world/api
+
+
+entitymanager:
+  packagesToScan: org.hello.boot
+    
+
+info:
+  app:
+    name: World RestFul Sevice V2
+    description: Detail of Countrys, Citys, Region, Languages .... etc around the world.
+    version: 2.0.1
