@@ -26,13 +26,18 @@ server:
   port: 8089
   contextPath: /world/api
 
-
-entitymanager:
-  packagesToScan: org.hello.boot
-    
-
 info:
   app:
     name: World RestFul Sevice V2
     description: Detail of Countrys, Citys, Region, Languages .... etc around the world.
     version: 2.0.1
+    
+entitymanager:
+  packagesToScan: org.hello.boot
+
+okta:
+  oauth2:
+    issuer: https://dev-513058.oktapreview.com/oauth2/default
+    clientId: 0oadi32wlhejkc5lJ0h7
+    clientSecret: NbmfWBrtSOh3x_N-ze-zwMAeWJ1_I5KTWRFJc_Ii
+    redirectUri: http://localhost:8089/world/api/login
